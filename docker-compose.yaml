@@ -4,6 +4,6 @@ services:
   hello-world:
     build:
       context: .
-    image: conservis/hello-world:latest
+    image: ${DOCKER_REPOSITORY:-conservis/hello-world}:${DOCKER_TAG:-latest}
     ports:
       - 19080:9080/tcp
